@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonJS", 
+    "jsx": "react-jsx",
+    "strict" : true, 
+    "esModuleInterop": true, 
+    "skipLibCheck": true, 
+    "outDir": "./dist",
+    "rootDir": "./src", 
+    "baseUrl": "./src", 
+    "paths": {
+      "*" : ["*"]
+    } 
+  }, 
+  "include": ["src/**/*"], 
+  "exclude": ["node_modules"]
+}

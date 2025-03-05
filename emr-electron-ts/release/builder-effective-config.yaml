@@ -1,0 +1,9 @@
+directories:
+  output: release
+  buildResources: build
+appId: com.emr.desktop
+files:
+  - filter:
+      - dist/**/*
+      - public/**/*
+electronVersion: 35.0.0
