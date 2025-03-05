@@ -1,12 +1,23 @@
 {
     "compilerOptions": {
-      "target": "es6",
+      "target": "es2020",
       "module": "commonjs",
       "strict": true,
       "esModuleInterop": true,
       "skipLibCheck": true,
-      "outDir": "./dist",
-      "rootDir": "./src/electron"
+      "forceConsistentCasingInFileNames": true,
+      "outDir": "dist/electron",
+      "sourceMap": true,
+      "resolveJsonModule": true,
+      "baseUrl": ".",
+      "paths": {
+        "*": ["node_modules/*"]
+      }
     },
-    "include": ["src/electron/**/*"]
+    "include": [
+      "src/electron/**/*.ts"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
   }
