@@ -64,8 +64,9 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <h1>EMR Desktop</h1>
+      <h2 className='text-purple-600'>Add a New Patient</h2>
       <input value={name} onChange={e => setName(e.target.value)} placeholder="Name" />
+      
       <input value={dob} onChange={e => setDob(e.target.value)} placeholder="DOB (YYYY-MM-DD)" />
       <input value={medicalId} onChange={e => setMedicalId(e.target.value)} placeholder="Medical ID" />
       <button onClick={addPatient}>Add Patient</button>
