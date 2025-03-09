@@ -26,6 +26,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@headlessui/react": "^2.2.0",
     "axios": "^1.8.1",
     "lucide-react": "^0.478.0",
     "react": "^19.0.0",
