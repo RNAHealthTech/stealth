@@ -4,6 +4,9 @@ import { ChevronDown, Menu, Users, FileText, Settings, BarChart2, Lock, LogOut }
 import { Patient } from 'types/patient';
 import PatientManagement from './PatientManagement';
 import UserManagement from './UserManagement';
+import PrescriptionManagement from './PerscriptionManagement';
+import EMRSettings from './EMRSettings';
+
 
 interface NavItemProps {
     icon: React.ReactNode;
@@ -268,7 +271,7 @@ const DashboardCard:React.FC<DashboardCardProps> = ({ title, value, color }) => 
     );
 };
 
-// Patient List Item Component
+
 const PatientListItem: React.FC<PatientListItemProps> = ({ name, id, lastVisit, status }) => (
     <div className="flex items-center justify-between py-2 border-b border-gray-100">
         <div>
@@ -285,109 +288,5 @@ const PatientListItem: React.FC<PatientListItemProps> = ({ name, id, lastVisit, 
 );
 
 
-const PrescriptionManagement = () => (
-    <div className="space-y-6">
-        <div className="bg-white rounded-lg shadow p-6">
-            <h3 className="text-lg font-semibold mb-4">Prescription Management</h3>
-            <div className="flex justify-between mb-6">
-                <div className="flex space-x-2">
-                    <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">
-                        New Prescription
-                    </button>
-                    <button className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50">
-                        Import from SmartPen
-                    </button>
-                </div>
-                <div>
-                    <select className="border rounded-lg px-4 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
-                        <option>All Prescriptions</option>
-                        <option>Pending</option>
-                        <option>Completed</option>
-                        <option>Rejected</option>
-                    </select>
-                </div>
-            </div>
-            {/* Prescription table would go here */}
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-lg shadow p-6">
-                <h3 className="text-lg font-semibold mb-4">SmartPen Integration</h3>
-                <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
-                    <p className="text-gray-500 mb-4">Drop prescription scans here or connect SmartPen</p>
-                    <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">
-                        Connect SmartPen
-                    </button>
-                </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow p-6">
-                <h3 className="text-lg font-semibold mb-4">Validation Status</h3>
-                <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                        <span className="text-gray-600">Drug Database</span>
-                        <span className="text-green-600 font-medium">Connected</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                        <span className="text-gray-600">Dosage Verification</span>
-                        <span className="text-green-600 font-medium">Active</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                        <span className="text-gray-600">Pharmacy Network</span>
-                        <span className="text-green-600 font-medium">Online</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-);
-
-
-const EMRSettings = () => (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white rounded-lg shadow p-6">
-            <h3 className="text-lg font-semibold mb-4">Security Settings</h3>
-            <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                    <span className="text-gray-600">Two-Factor Authentication</span>
-                    <span className="text-green-600 font-medium">Enabled</span>
-                </div>
-                <div className="flex items-center justify-between">
-                    <span className="text-gray-600">Session Timeout</span>
-                    <span className="text-gray-800 font-medium">30 minutes</span>
-                </div>
-                <div className="flex items-center justify-between">
-                    <span className="text-gray-600">Data Encryption</span>
-                    <span className="text-green-600 font-medium">AES-256</span>
-                </div>
-                <div className="flex items-center justify-between">
-                    <span className="text-gray-600">Last Security Audit</span>
-                    <span className="text-gray-800 font-medium">Feb 28, 2025</span>
-                </div>
-            </div>
-        </div>
-
-        <div className="bg-white rounded-lg shadow p-6">
-            <h3 className="text-lg font-semibold mb-4">Sync Settings</h3>
-            <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                    <span className="text-gray-600">Auto-Sync Enabled</span>
-                    <span className="text-green-600 font-medium">Yes</span>
-                </div>
-                <div className="flex items-center justify-between">
-                    <span className="text-gray-600">Sync Frequency</span>
-                    <span className="text-gray-800 font-medium">Every 15 minutes</span>
-                </div>
-                <div className="flex items-center justify-between">
-                    <span className="text-gray-600">Last Sync</span>
-                    <span className="text-gray-800 font-medium">Today, 11:23 AM</span>
-                </div>
-                <button className="mt-2 w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded">
-                    Sync Now
-                </button>
-            </div>
-        </div>
-    </div>
-);
 
 export default EMRDashboard;
